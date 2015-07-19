@@ -1,3 +1,42 @@
-<h2 id="title">Welcome to Ember.js</h2>
+<h2>NOAA Querier</h2>
+
+<label>Dataset ID</label>
+{{input value=model.queryparams.datasetid}}
+
+<br>
+<label>Datatype ID</label>
+{{input value=model.queryparams.datatypeid}}
+
+<br>
+<label>Location ID</label>
+{{input value=model.queryparams.locationid}}
+
+<br>
+<label>Start Date</label>
+{{input value=model.queryparams.startdate}}
+
+<br>
+<label>End Date</label>
+{{input value=model.queryparams.enddate}}
+
+<br>
+<label>Limit</label>
+{{input value=model.queryparams.limit}}
+
+<br>
+<label>Offset</label>
+{{input value=model.queryparams.offset}}
+
+<p>
+  <label>URL</label>
+  <br>
+  <code>{{url}}</code>
+</p>
+
+<button {{action 'call'}}>Send Request</button>
+
+<p>
+  <code>{{response}}</code>
+</p>
 
 {{outlet}}
